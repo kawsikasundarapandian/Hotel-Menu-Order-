@@ -1,1 +1,37 @@
 # Hotel-Menu-Order-
+Menu={
+
+"Coffee":20,
+
+"Pasta":50,
+
+"Rosemilk":60,
+
+"Salad":70,
+
+"Ice cream":30,
+
+}
+
+
+print("Welcome to SSK Restaurant")
+
+print("Coffee: Rs.20\nPasta: Rs.50\nRosemilk: Rs.60\nSalad: Rs.70\nIce cream: Rs.36")
+order_total=0
+item_1 = input("Enter the name of item you want to order=")
+if item_1 in Menu:
+    order_total += Menu[item_1]
+    print(f"Ordered item {item_1} has been added to your order")
+else:
+    print(f"Sorry Ordered item {item_1} is not available yet!!")
+Next_order=input("Do you want to add another item?\n(Yes/No)")
+
+if Next_order == "Yes":
+    item_2= input("Enter the name of item you want to order=")
+    if item_2 in Menu:
+        order_total+=Menu[item_2]
+        print(f"Ordered item {item_2} has been added to your order")
+    else:
+        print(f"Sorry Ordered item {item_2} is not available yet!!")
+print(f"The Total amount of items to pay is {order_total}")
+print("Thank you For Staying with us! We hope to see you Again Soon..")
